@@ -36,7 +36,8 @@ fun <T> checkType(args: T): String {
         args is Boolean -> "Yes! it's Boolean"
         args is Double -> "Yes! it's Double"
         args is List<*> -> "Yes! it's List"
-        else -> "Yes! it's Map"
+        args is Map<*,*> -> "Yes! it's Map"
+        else -> "Sorry, We cannot identify this type"
     }
 }
 
